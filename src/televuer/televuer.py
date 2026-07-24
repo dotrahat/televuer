@@ -1,4 +1,4 @@
-from vuer import Vuer
+from vuer.server import Vuer
 from vuer.schemas import ImageBackground, Hands, MotionControllers, WebRTCVideoPlane, WebRTCStereoVideoPlane
 from multiprocessing import Value, Array, Process, shared_memory
 import numpy as np
