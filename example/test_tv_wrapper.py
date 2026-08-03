@@ -16,7 +16,7 @@ def run_test_tv_wrapper():
 
     # teleimager, if you want to test real image streaming, make sure teleimager server is running
     from teleimager.image_client import ImageClient
-    img_client = ImageClient(host="192.168.123.164")
+    img_client = ImageClient(host="127.0.0.1")
     camera_config = img_client.get_cam_config()
     # teleimager + televuer
     tv_wrapper = TeleVuerWrapper(use_hand_tracking=use_hand_track, 
@@ -26,7 +26,7 @@ def run_test_tv_wrapper():
                                 display_fps=camera_config['head_camera']['fps'],
                                 zmq=camera_config['head_camera']['enable_zmq'],
                                 webrtc=camera_config['head_camera']['enable_webrtc'],
-                                webrtc_url=f"https://192.168.123.164:{camera_config['head_camera']['webrtc_port']}/offer"
+                                webrtc_url=f"https://127.0.0.1:{camera_config['head_camera']['webrtc_port']}/offer"
                                 )
     # pure televuer
     # tv_wrapper = TeleVuerWrapper(use_hand_tracking=use_hand_track, 
@@ -36,7 +36,7 @@ def run_test_tv_wrapper():
     #                              display_mode="ego", 
     #                              zmq=True,
     #                              webrtc=True, 
-    #                              webrtc_url="https://192.168.123.164:60001/offer"
+    #                              webrtc_url="https://127.0.0.1:60001/offer"
     #                              )
     try:
         input("Press Enter to start tv_wrapper test...")

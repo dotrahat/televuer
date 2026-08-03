@@ -227,7 +227,7 @@ class TeleData:
 
 class TeleVuerWrapper:
     def __init__(self, use_hand_tracking: bool, binocular: bool=True, img_shape: tuple=(480, 1280), display_fps: float=30.0,
-                       display_mode: Literal["immersive", "pass-through", "ego"]="immersive", zmq: bool=False, webrtc: bool=False, webrtc_url: str=None, 
+                       display_mode: Literal["immersive", "pass-through", "ego"]="immersive", zmq: bool=True, webrtc: bool=True, webrtc_url: str=None, 
                        cert_file: str=None, key_file: str=None, return_hand_rot_data: bool=False,
                        arm_reference_mode: Literal["head_position", "head_yaw"]="head_yaw"):
         """
